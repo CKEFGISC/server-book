@@ -12,5 +12,5 @@ preferred-dark-theme = "navy"
 mathjax-support = true
 git-repository-url = "https://github.com/CKEFGISC/server-book"
 git-repository-icon = "fa-github"
-edit-url-template = "https://github.com/CKEFGISC/server-book/edit/master/guide/{path}"
+edit-url-template = "https://github.com/CKEFGISC/server-book/edit/main/{path}"
 cname = "serverbook.ckefgisc.org"
