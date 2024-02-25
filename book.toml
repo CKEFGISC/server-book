@@ -1,0 +1,12 @@
+[book]
+authors = ["AaronWu-train"]
+language = "zh-TW"
+multilingual = false
+src = "src"
+title = "Ckefgisc Server Book"
+description = "A passed down book about Ckefgisc's Server and Sites and its usage."
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+mathjax-support = true

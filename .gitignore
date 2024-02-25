@@ -1,0 +1,5 @@
+# Ignore mdbook files
+book/
+
+# OS generated files
+.DS_Store
