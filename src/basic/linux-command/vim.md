@@ -24,7 +24,7 @@ Vim 具有多種模式，包括普通模式（Normal mode）、插入模式（In
   > 注意指令當中的`:`和驚嘆號都是有意義的！
 
   - 離開 Vim: ~~無法~~ `:q`
-    - 朝聖一下 (How Do I Exit Vim?)[https://stackoverflow.com/questions/11828270/how-do-i-exit-vim]
+    - 朝聖一下 [How Do I Exit Vim?](https://stackoverflow.com/questions/11828270/how-do-i-exit-vim)
   - 保存文件並退出: `:wq`
   - 不保存文件並退出: `:q!`
 
