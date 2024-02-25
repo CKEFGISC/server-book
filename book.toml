@@ -10,3 +10,7 @@ description = "A passed down book about Ckefgisc's Server and Sites and its usag
 default-theme = "light"
 preferred-dark-theme = "navy"
 mathjax-support = true
+git-repository-url = "https://github.com/CKEFGISC/server-book"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/CKEFGISC/server-book/edit/master/guide/{path}"
+cname = "serverbook.ckefgisc.org"
