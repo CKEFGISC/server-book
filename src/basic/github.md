@@ -25,7 +25,7 @@
 
 而最基本的，你要能夠理解 add、commit、push、fetch、pull 這些操作，並且能夠理解 branch、fork、merge 和 pull request 是什麼。
 
-常用的指令紀錄在[2.4. Git 指令](linux-command/git-command.md)
+常用的指令紀錄在[2.4. Git 指令](linux-command/git.md)
 
 可使用的資源：
 
