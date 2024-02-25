@@ -1,7 +1,5 @@
 # 給你們的練習
 
-# 給你們的功課
-
 ## 1. 練習安裝 linux 虛擬機
 
 請試著透過 Virturalbox 安裝 Ubuntu 虛擬機。
