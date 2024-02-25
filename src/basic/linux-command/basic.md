@@ -1,0 +1,78 @@
+# 基本指令
+
+- `ls`
+  - 列出工作路徑下的檔案或是目錄清單
+- `cd`
+  - 切換目錄的路徑
+- `pwd`
+  - 列印工作路徑
+- `cp <A> <B>`
+  - 拷貝檔案 A 到 B
+  - 用`-r`複製目錄：
+    - `cp -r path/to/dir/a path/to/dir/b`
+- `mv <A> <B>`
+  - 移動
+  - 重新命名也是這樣用
+  - 用`-r` 移動目錄
+- `touch <FILENAME>`
+  - 碰一下
+  - 建立一個空的文件檔
+- `mkdir <DIR-NAME>`
+  - 建立新資料夾
+- `rm <FILENAME>`
+  - 刪除檔案
+  - 加 `-r` 刪資料夾
+  - 加 `-f` 強制
+- `sudo <指令>`
+  - 以 root（管理員 aka 超級使用者）權限執行指令
+  - 注意！危險！小心使用！
+  - 執行後要輸入密碼
+- `sudo su`
+  - 成為 root 使用者
+- `ln`
+  - 建立“連結”
+  - https://blog.gtwang.org/linux/linux-ln-command-tutorial-examples/
+  - https://ithelp.ithome.com.tw/articles/10222754
+  - 常用 ln -s 將執行檔 link 到 bin 目錄當中（linux 中的==安裝==）
+- `chmod`
+  - 變更檔案權限
+  - 參考網址：https://weikaiwei.com/linux/chmod-commands/
+- `cat`
+  - 把某個檔案的東西在終端機中印出來
+  - https://weikaiwei.com/linux/cat-command/
+  - 會和 pipe 結合成怪怪用法
+- `echo <A>`
+  - 終端機就會輸出`<A>`
+  - 會和`>` `>>`結合成怪怪用法
+- `>` `<` `>>`
+  - `<`
+    - `指令 < 檔案`
+    - 將檔案的東西導入指令的“輸入流”
+  - `>`
+    - `指令 > 檔案`
+    - 將指令的“輸出流”輸出到檔案（原檔案內容會被洗掉）
+  - `>>`
+    - `指令 >> 檔案`
+    - 將指令的“輸出流”輸出到檔案（添加在原檔案內容後面）
+- `neofetch`
+  - 出現這個酷東東
+  - ![](https://hackmd.io/_uploads/HJfCWmaO2.png)
+- `gcc`、`g++`
+  - 就...gcc 和 g++
+- `ssh`
+  - 遠端連線
+  - `ssh username@ip-address`
+  - 例如：`ssh fgisc@203.64.52.132`
+- `scp`
+  - 遠端複製檔案
+  - https://blog.gtwang.org/linux/linux-scp-command-tutorial-examples/
+- `zip`、`unzip`
+  - https://www.ltsplus.com/linux/linux-zip-unzip
+- `man`
+  - 教學文件
+  - `man <指令>`
+  - 得到 `<指令>` 的文件內容
+  - 例如：`man git`
+  - ![](https://hackmd.io/_uploads/BJGV776d3.png)
+
+參考資料：<https://blog.ossii.com.tw/?p=2241#>

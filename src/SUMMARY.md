@@ -4,8 +4,12 @@
 
 # 基本工具
 
-- [Git 與 Github](./basic/git.md)
-- [常用 Linux 指令](./basic/linux-command.md)
+- [Github](./basic/github.md)
+- [常用 Linux 指令](./basic/linux-command/index.md)
+  - [基本指令](./basic/linux-command/basic.md)
+  - [apt](./basic/linux-command/apt.md)
+  - [Vim](./basic/linux-command/vim.md)
+  - [Git](./basic/linux-command/git.md)
 
 # 伺服器與社網
 
@@ -19,8 +23,8 @@
   - [其他東西](./server/other.md)
 
 - [關於社網的那檔事](./website/index.md)
-  - [關於一四社網那檔事](./website/28th.md)
   - [關於一三社網那檔事](./website/27th.md)
+  - [關於一四社網那檔事]()
   - [關於網域的那檔事](./website/domain.md)
   - [關於 SEO 的那檔事](./website/seo.md)
 
