@@ -2,8 +2,8 @@
 
 ## 文件
 
-官方文件：https://cms.readthedocs.io/en/
-一份寫得不錯的文件（我是根據他裝的）：https://hackmd.io/@erichung0906/cms
+官方文件：<https://cms.readthedocs.io/en/>
+一份寫得不錯的文件（我是根據他裝的）：<https://hackmd.io/@erichung0906/cms>
 
 ## 架設
 
