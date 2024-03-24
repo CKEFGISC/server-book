@@ -10,7 +10,15 @@ TIOJ 位在的資料夾：`/home/fgisc/tioj-new`aka`~/tioj-new`
 
 ## 架設
 
-我不知道 請找 AaW
+```bash=
+git clone https://github.com/TIOJ-INFOR-Online-Judge/tioj.git
+cd tioj
+cp .env.example .env
+
+# setup keys
+
+docker-compose up -d
+```
 
 ## 啟動 OJ
 
@@ -62,6 +70,66 @@ sudo systemctl restart nginx
 ```
 
 可能是因為你在 srv 刪錯東西的原因
+
+## External Judge Server
+如果之後我創了tioj-judge-docker再放上來
+
+現在先講怎麼手動加上compose並接上oj
+
+```bash=
+git clone https://github.com/TIOJ-INFOR-Online-Judge/tioj-judge.git
+cd tioj-judge
+```
+
+用vim開一個 .env 然後把下面的東西放進去，要記得改自己的網址和FETCH_KEY
+
+```bash
+vim .env
+```
+不用加冒號
+```yaml
+TIOJ_URL: your_url_here
+TIOJ_KEY: your_fetch_key_here
+```
+
+接下來創一個docker-compose.yml
+```bash=
+vim docker-compose.yml
+```
+把這些放進去
+```yaml
+version: "3.7"
+
+x-logging:
+  &default-logging
+  driver: "json-file"
+  options:
+    max-size: "100m"
+    max-file: "2"
+
+services:
+  judge:
+    build: https://github.com/TIOJ-INFOR-Online-Judge/tioj-judge.git
+    environment:
+      TIOJ_URL: $TIOJ_URL
+      TIOJ_KEY: $TIOJ_KEY
+    volumes:
+      - /srv/tioj/judge-td-pool:/var/lib/tioj-judge/td-pool
+      - /srv/tioj/judge-testdata:/var/lib/tioj-judge/testdata
+      - ./tioj-judge:/judge
+    tmpfs:
+      - /tmp:exec
+    privileged: true
+    network_mode: host
+    pid: host
+    logging: *default-logging
+```
+啟動他
+```bash
+docker-compose up -d
+```
+
+最後進到tioj的admin頁面新增一個judge server即可(name隨便打 ip不用打 key要是一樣的)
 
 ## 題目新增方式
 
