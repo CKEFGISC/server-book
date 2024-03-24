@@ -1,4 +1,6 @@
-# [建北電資網管傳承](https:/serverbook.ckefgisc.org/)
+# [The Server Book](https:/serverbook.ckefgisc.org/)
+> 建北電資網管傳承文檔
+
 
 ## 簡介
 這一篇筆記，是 AaW 為了傳承所有一三曾經管理的網路相關服務所寫的（類）技術文件。
