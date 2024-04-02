@@ -185,3 +185,38 @@ https://ckefgisc.org/cms-ranking-archiver/<比賽名稱>
   - 裡面放 team_code.png/jpg
   - 記得要先在 admin 頁面 create team
   - 然後在比賽中為 user 指定 team
+
+
+## External Judge Server(Worker)
+這東西相當之弔詭，cms的documentation中提到這個的只有說你可能會想在不同伺服器開不同worker，所以這些是我通靈出來的，可能會遇到一些不可預期的錯誤
+
+### Before action
+如果CMS是用docker架設的，需先將儲存空間移到靜態位置，不然每次重新啟動docker更改過的文件便會被洗掉，做的方式為在docker-compose.yml指定volume
+可先啟動docker一次，並透過
+
+```bash
+docker exec --it cms bash
+```
+
+進入docker的終端機頁面把放在/usr/local/etc的cms.conf複製出來，因為其涉及加密無法提供範本，如果之後找到在外面生成的方式亦會更新此文，在yaml的volume中加入此行便可將其轉換為靜態
+
+```yaml
+- "./cmsconfig:/usr/local/etc"
+```
+
+可刪減不需要的服務如ranking web server，judge址需要留下worker的部分，基本的也要留
+
+最後將docker-compose.yml最下面的cms開頭指令改為你要開啟的worker即可，如要開啟編號為0的worker便打
+```bash
+cmsWorker 0
+```
+也可同時啟動多個
+
+編號為依據cms.conf中worker陣列的index，每個worker其使用的port皆有意義，需記住
+
+在judge server上開啟worker後，需要到主程式端新增worker，新增方式為在cms.conf加上新的項目(這邊也需要將cms.conf)移至靜態儲存空間
+```
+[external_judge_server_ip, judge_port]
+```
+注意judge server必須為連通外網之伺服器，若需架於內網可透過如反向ssh通道實現
+重新啟動後即可在admin看到這台worker正在運轉了
