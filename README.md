@@ -1,5 +1,5 @@
 # 建北電資網管傳承文檔
-> <https:/serverbook.ckefgisc.org/>
+> <https://serverbook.ckefgisc.org/>
 
 
 ## 簡介
