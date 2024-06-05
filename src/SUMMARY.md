@@ -24,7 +24,7 @@
 
 - [關於社網的那檔事](./website/index.md)
   - [關於一三社網那檔事](./website/27th.md)
-  - [關於一四社網那檔事]()
+  - [關於一四社網那檔事](./website/28th.md)
   - [關於網域的那檔事](./website/domain.md)
   - [關於 SEO 的那檔事](./website/seo.md)
 
