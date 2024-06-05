@@ -21,7 +21,7 @@
 
 以下所有服務皆是使用 docker 架設
 
-1. ISCOJ
+1. ISCOJ(已退役)
 
    - 精確地來說，是名稱為 iscoj 的一個[青島 OJ 系統](https://github.com/QingdaoU/OnlineJudge)。
    - 檔案位置：`/OnlineJudgeDeploy/`
@@ -30,31 +30,30 @@
 2. CMS 比賽評測系統 (Contest Management System)
    - 分為 前台 (port 8888)、後台 (port 8889)、計分版 (port 8890)三大服務
    - 檔案位置：`~/cms/`、`/cms_docker_postgresql_data/`
-3. 幫 python 架設的另一個 CMS 比賽評測系統
-   - 因為一台 CMS 無法一次開設兩場比賽，~~所以我架了兩個~~
-   - 檔案位置：`~/cmspython/`、`/cms_python_docker_postgresql_data/`
 
-#### 未使用之網路服務
+3. TIOJ Infor Online Judge
+    - 本社目前使用的oj，檔案位置為`~/tioj-new/`，由建中學長開發，各式文檔並不齊全(伺服器端的大部分根本不存在)，請自行熟悉ruby on rails以及sandbox後再進行修改
 
-1. TIOJ：`~/tioj-new/`
-2. OJDL：`~/ojdl2-docker/`
-3. 其他在家目錄(`~`aka`/home/fgisc`)資料夾底下的東西
+4. Online Code Editor
+    - 不知道為什麼架的，但可以在上面共編東西，檔案位置 `~/vscode`，網址是 https://iscoj.ckefgisc.org/vscode
 
-#### 吳亞倫調整過的設定
 
-1. iscoj systemd service
-   - `/etc/systemd/system/iscoj-docker-compose-app.service`
-2. nginx
-3. certbot
+#### 其他服務
 
-基本上，家目錄裡面的東西（除了 cms），很多都是測試用途，可以嘗試看看
+1. nginx
+    - 處理各式轉址以及效能平衡
+2. certbot
+    - 自動更新SSL憑證
+
+
+基本上，家目錄裡面的東西（除了上述提到的服務），很多都是測試用途，可以嘗試看看
 但是，根目錄(`/`)底下的資料夾，==不懂的人沒事不要上去亂動！==
 
 ### 網域
 
 - 伺服器 ip 位址：`203.64.52.132`
-- 網址：`iscoj.fg.tp.edu.tw`、`fgiscoj.fg.tp.edu.tw`
-  - 只有這兩個網址可以使用。因此，如果希望架設更多服務，必須要使用反向代理到 subfolder 底下。
+- 網址：`iscoj.fg.tp.edu.tw`、`fgiscoj.fg.tp.edu.tw`、`iscoj.ckefgisc.org`
+  - 如果需要更多網域登入學長的aws後就可以新增A record 指向ip即可
 
 ### 使用者名稱
 
@@ -82,23 +81,21 @@
 - 22: ssh
 - 80: http
 - 443: https
-- 8888、8889、8890: CMS 系統
+- 8888、8889、8890: 測試用
 
 另外可能還有一些別的 port，但我沒用過也不確定。
 如果你們希望開啟其他的 port 作為測試用途，例如`8000`，可以請雪臻老師幫忙。
 
-在所有 AaW 建立過的網際網路服務當中，使用到了以下 port：
+在所有網際網路服務當中，使用到了以下 port：
 
 - 平常啟用
   - 80：對外所有 http
   - 443:對外所有 https
   - 8000：青島 oj 的 http
   - 1443：青島 oj 的 https
-  - 8888：CMS 使用者比賽頁面
-  - 8889：CMS admin
-  - 8890：CMS ranking
-- 平常未啟用： - 8788/8789/8790：python cms - tioj: 4000 - ojdl: 聽說架起來會在 80 port 但我沒成功架設過 - translation: 9000，一樣沒成功用過
-  ![](https://hackmd.io/_uploads/H1DLHjFPh.png)
+  - 8890：CMS 使用者比賽頁面
+  - 8891：CMS admin
+  - 8892：CMS ranking
 
 ### nginx 與 反向代理 (reverse proxy)
 
@@ -327,9 +324,7 @@ server {
 我自己目前是看這一篇教學設定的：
 https://blog.hellojcc.tw/setup-https-with-letsencrypt-on-nginx/
 
-理論上現在設定應該是好的，也有自動四個月更新憑證的設定
-但因為我設定完到現在也還不到四個月所以我不確定效果如何。
-所以如果到時候憑證有過期可以再跟我聯絡。（理論上會過期的那時候我已經考完學測了）
+
 
 #### 目前檔案路徑
 
