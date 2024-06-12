@@ -10,6 +10,7 @@
   - [apt](./basic/linux-command/apt.md)
   - [Vim](./basic/linux-command/vim.md)
   - [Git](./basic/linux-command/git.md)
+  - [Port](./basic/linux-command/port.md)
 
 # 伺服器與社網
 
