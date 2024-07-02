@@ -12,8 +12,16 @@
 - `cms` : CMS 上機考評測系統的原始碼，是從 https://github.com/erichung09060/cms fork 到吳亞倫的 github 帳號再 fork 過來的。目前為於伺服器上面的 cms 系統是接著這個 repo。詳情請見[CMS 比賽平台管理與使用](/SngEqSHATySgeTG8j312Gg)
 - `cms-ranking-archiver`：用來把 cms 上面的計分板內容抓下來變成靜態網頁。使用方式請見[CMS 比賽平台管理與使用]()
 - `CKEFGISC-Linked-List`：之前專案小社的內容
-- `.github`：好像可以拿來寫組織的介紹之類的
+- `.github`：可以拿來寫組織的介紹之類的
 - `translation`：從 IOI 抓來的東東，還不知道有什麼用
+- `MochaGen(-Assembler)`：某些一二到一四的YTP專題
+- `archives`：社內上機比賽的封存檔
+- `iscoj-tioj-old`：舊oj專案庫
+- `Commander`：從discord溝通伺服器的酷東西
+- `27, 28th-website`：歷屆社網
+- `iscoj-tioj`：本社oj目前使用的專案庫
+- `club-exhibition-website`：社網本來要用的網站
+- `server-book`：本網站
 
 基本上，所有 github 的設定你們都可以亂動，if 你知道自己在做什麼。只要注意不要不小心把東西刪掉就好。
 
