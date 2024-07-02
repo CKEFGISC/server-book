@@ -293,10 +293,10 @@ server {
 
 > 記得大部分都要 sudo，所以請小心使用
 
-- `ststemctl start <SERVICE_NAME>.service`
+- `systemctl start <SERVICE_NAME>.service`
   - 啟動`<SERVICE_NAME>` 這個服務，例如`ststemctl start nginx.service`
-- `ststemctl stop <SERVICE_NAME>.service`：停止這個服務
-- `ststemctl restart <SERVICE_NAME>.service`：重啟這個服務
+- `systemctl stop <SERVICE_NAME>.service`：停止這個服務
+- `systemctl restart <SERVICE_NAME>.service`：重啟這個服務
 - 其他的自己 google，但理論上你只會用到這幾個
 
 #### 自行設定服務
@@ -323,6 +323,7 @@ server {
 
 我自己目前是看這一篇教學設定的：
 https://blog.hellojcc.tw/setup-https-with-letsencrypt-on-nginx/
+
 
 
 
