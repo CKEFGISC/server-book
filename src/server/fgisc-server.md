@@ -326,6 +326,7 @@ https://blog.hellojcc.tw/setup-https-with-letsencrypt-on-nginx/
 
 
 
+certbot如果要登記新的網域需重新啟動，此時他會覆蓋掉原本的nginx執行緒，並佔用 80 PORT，即使查看執行緒直接kill仍無法重啟nginx，原因未知，如果可以的話希望你們能找出來，惟重開機可解決。
 
 #### 目前檔案路徑
 
