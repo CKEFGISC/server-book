@@ -37,4 +37,4 @@
 > 詹依寰 學長
 > EMAIL: `yihuan.chan@gmail.com`
 > 目前我們 ckefgisc.org 和 ckeisc.org ==網域==的所有人是這一位學長，有事可以聯絡他。
-:::
+
