@@ -24,3 +24,8 @@
 
 建電 42nd 吳亞倫 筆
 2023.07.05
+
+> p.s.<br>
+> AaW 的聯絡資訊 <br>
+> Discord: aaw.rail <br>
+> Email: aaronwu0218@gmail.com
