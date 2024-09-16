@@ -1,8 +1,12 @@
 # TIOJ 使用說明
 
 TIOJ 位在的資料夾：`/home/fgisc/tioj-new`aka`~/tioj-new`
+
 由於此 oj 歷經多次嘗試才架設成功
+
 目前 oj 所在的資料夾名稱為`tioj-new`
+
+此外，本oj的judge已被分離至tioj-judge並加上docker-compose的檔案，必要時可複製該repo並於其他伺服器啟用judge server
 
 ## 文件
 
